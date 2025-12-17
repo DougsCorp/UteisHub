@@ -1,0 +1,12 @@
+# Robots.txt - Conversor de Moedas Online
+# https://www.robotstxt.org/
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://uteishub.com/ConversorMoedas/sitemap.xml
+
+# Crawl-delay (opcional, respeita os bots)
+Crawl-delay: 1
+

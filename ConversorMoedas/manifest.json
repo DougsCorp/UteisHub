@@ -1,0 +1,23 @@
+{
+  "name": "Conversor de Moedas Online",
+  "short_name": "Conversor",
+  "description": "Converta moedas em tempo real. Cotações atualizadas de Dólar, Euro, Libra e outras moedas.",
+  "start_url": "/ConversorMoedas/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#6366f1",
+  "orientation": "portrait-primary",
+  "lang": "pt-BR",
+  "icons": [
+    {
+      "src": "./assets/images/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["finance", "utilities"],
+  "screenshots": [],
+  "prefer_related_applications": false
+}
+

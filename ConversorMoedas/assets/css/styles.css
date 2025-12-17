@@ -1,0 +1,381 @@
+/**
+ * Conversor de Moedas - Estilos Customizados
+ * Otimizado para performance e acessibilidade
+ */
+
+/* ============================================
+   CSS Custom Properties (Design Tokens)
+   ============================================ */
+:root {
+    --color-primary-50: #eef2ff;
+    --color-primary-100: #e0e7ff;
+    --color-primary-200: #c7d2fe;
+    --color-primary-300: #a5b4fc;
+    --color-primary-400: #818cf8;
+    --color-primary-500: #6366f1;
+    --color-primary-600: #4f46e5;
+    --color-primary-700: #4338ca;
+    --color-primary-800: #3730a3;
+    --color-primary-900: #312e81;
+    
+    --color-accent: #ec4899;
+    --color-success: #059669;
+    --color-error: #dc2626;
+    
+    --font-family: 'Outfit', system-ui, -apple-system, sans-serif;
+    --transition-base: 0.2s ease;
+    --border-radius-base: 0.75rem;
+    --border-radius-lg: 1rem;
+    --border-radius-xl: 1.5rem;
+}
+
+/* ============================================
+   Base Styles
+   ============================================ */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-family);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
+
+/* ============================================
+   Form Elements
+   ============================================ */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+input::placeholder {
+    color: #9ca3af;
+    opacity: 1;
+}
+
+select {
+    background-image: none;
+}
+
+select option {
+    padding: 12px;
+    font-size: 14px;
+}
+
+/* ============================================
+   Focus States (Accessibility)
+   ============================================ */
+*:focus-visible {
+    outline: 2px solid var(--color-primary-500);
+    outline-offset: 2px;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible {
+    outline: 2px solid var(--color-primary-500);
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+/* ============================================
+   Animations
+   ============================================ */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-15px) rotate(5deg);
+    }
+}
+
+@keyframes float-delayed {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-12px) rotate(-5deg);
+    }
+}
+
+@keyframes float-slow {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+@keyframes skeleton-loading {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
+
+.animate-float {
+    animation: float 4s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+    animation: float-delayed 5s ease-in-out infinite;
+    animation-delay: 1s;
+}
+
+.animate-float-slow {
+    animation: float-slow 6s ease-in-out infinite;
+    animation-delay: 2s;
+}
+
+.animate-spin {
+    animation: spin 1s linear infinite;
+}
+
+.animate-pulse {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* ============================================
+   Components
+   ============================================ */
+
+/* Currency Circle */
+.currency-circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    text-align: center;
+    position: relative;
+}
+
+.currency-circle > span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+}
+
+/* Rate Card */
+.rate-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.rate-card:hover {
+    transform: translateY(-4px);
+}
+
+/* Table Row */
+.table-row {
+    transition: background-color var(--transition-base);
+}
+
+.table-row:hover {
+    background-color: #f9fafb;
+}
+
+/* Conversion Table Striping */
+#conversionTable > div:nth-child(even) {
+    background-color: #f9fafb;
+}
+
+/* Gradient Text Support */
+.bg-clip-text {
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+/* Skeleton Loading */
+.skeleton {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: skeleton-loading 1.5s infinite;
+}
+
+/* Toast Notifications */
+.toast {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%) translateY(100px);
+    background: #1f2937;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    z-index: 1000;
+}
+
+.toast.show {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+}
+
+.toast.success {
+    background: var(--color-success);
+}
+
+.toast.error {
+    background: var(--color-error);
+}
+
+/* FAQ Accordion */
+.faq-item {
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.faq-question {
+    cursor: pointer;
+    user-select: none;
+}
+
+.faq-question:hover {
+    color: var(--color-primary-600);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.faq-item.open .faq-answer {
+    max-height: 500px;
+}
+
+.faq-icon {
+    transition: transform 0.3s ease;
+}
+
+.faq-item.open .faq-icon {
+    transform: rotate(180deg);
+}
+
+/* Button States */
+button:active {
+    transform: scale(0.98);
+}
+
+/* Smooth Transitions */
+a, button, input, select {
+    transition: all var(--transition-base);
+}
+
+/* ============================================
+   Responsive Design
+   ============================================ */
+@media (max-width: 768px) {
+    button, 
+    select, 
+    input {
+        min-height: 48px;
+    }
+    
+    h1 {
+        font-size: 2rem !important;
+        line-height: 1.2;
+    }
+    
+    .rate-card {
+        margin-bottom: 0.5rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    h1 {
+        font-size: 3rem !important;
+    }
+}
+
+/* ============================================
+   Accessibility
+   ============================================ */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+@media (prefers-contrast: high) {
+    .rate-card {
+        border-width: 2px;
+    }
+    
+    input, select {
+        border-width: 2px;
+    }
+}
+
+/* ============================================
+   Print Styles
+   ============================================ */
+@media print {
+    header, footer, #refreshRates, #swapCurrencies, .toast {
+        display: none !important;
+    }
+    
+    body {
+        background: white !important;
+    }
+    
+    .shadow-2xl, .shadow-lg, .shadow-xl {
+        box-shadow: none !important;
+    }
+    
+    .animate-float, .animate-float-delayed, .animate-float-slow {
+        animation: none !important;
+    }
+}
+

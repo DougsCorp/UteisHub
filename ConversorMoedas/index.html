@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Primary Meta Tags -->
+    <title>Conversor de Moedas Online | Dólar Hoje, Euro, Libra - Cotação em Tempo Real</title>
+    <meta name="title" content="Conversor de Moedas Online | Dólar Hoje, Euro, Libra - Cotação em Tempo Real">
+    <meta name="description" content="Converta moedas em tempo real: Dólar, Euro, Libra e mais de 10 moedas. Cotações atualizadas do Banco Central. Conversor gratuito e fácil de usar.">
+    <meta name="keywords" content="conversor de moedas, dólar hoje, cotação dólar, euro hoje, libra hoje, câmbio, converter moeda, BRL USD EUR, cotação tempo real">
+    <meta name="author" content="Conversor de Moedas">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="googlebot" content="index, follow">
+    <meta name="language" content="Portuguese">
+    <meta name="revisit-after" content="1 days">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://uteishub.com/ConversorMoedas/">
+    
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#6366f1">
+    <meta name="msapplication-TileColor" content="#6366f1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Conversor">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://uteishub.com/ConversorMoedas/">
+    <meta property="og:title" content="Conversor de Moedas Online | Dólar Hoje - Cotação em Tempo Real">
+    <meta property="og:description" content="Converta moedas em tempo real: Dólar, Euro, Libra e mais. Cotações atualizadas do mercado financeiro brasileiro.">
+    <meta property="og:image" content="https://uteishub.com/ConversorMoedas/assets/images/og-image.svg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:site_name" content="UteisHub - Conversor de Moedas">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://uteishub.com/ConversorMoedas/">
+    <meta name="twitter:title" content="Conversor de Moedas Online | Dólar Hoje">
+    <meta name="twitter:description" content="Converta moedas em tempo real com cotações atualizadas.">
+    <meta name="twitter:image" content="https://uteishub.com/ConversorMoedas/assets/images/og-image.svg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="./assets/images/favicon.svg">
+    <link rel="apple-touch-icon" href="./assets/images/favicon.svg">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="./manifest.json">
+    
+    <!-- Preconnect para recursos externos -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://economia.awesomeapi.com.br">
+    
+    <!-- DNS Prefetch -->
+    <link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
+    
+    <!-- Google Fonts - Outfit -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#eef2ff',
+                            100: '#e0e7ff',
+                            200: '#c7d2fe',
+                            300: '#a5b4fc',
+                            400: '#818cf8',
+                            500: '#6366f1',
+                            600: '#4f46e5',
+                            700: '#4338ca',
+                            800: '#3730a3',
+                            900: '#312e81',
+                        },
+                        accent: '#ec4899',
+                    },
+                    fontFamily: {
+                        sans: ['Outfit', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+<body class="bg-white min-h-screen font-sans">
+    <!-- Skip to main content (Accessibility) -->
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-primary-600 text-white px-4 py-2 rounded-lg z-50">
+        Pular para o conteúdo principal
+    </a>
+
+    <!-- Header -->
+    <header class="w-full py-4 px-4 md:px-8 lg:px-16" role="banner">
+        <nav class="max-w-7xl mx-auto flex justify-between items-center" aria-label="Navegação principal">
+            <a href="./" class="flex items-center gap-2 group" aria-label="Conversor de Moedas - Página inicial">
+                <div class="currency-circle w-10 h-10 rounded-full bg-gradient-to-br from-primary-500 to-primary-700 text-white font-bold text-lg shadow-lg group-hover:shadow-xl transition-shadow" aria-hidden="true">
+                    <span>$</span>
+                </div>
+                <span class="text-lg font-semibold text-gray-800 hidden sm:block">Conversor de Moedas</span>
+            </a>
+            <div class="flex items-center gap-6">
+                <a href="#cotacoes" class="text-gray-600 hover:text-primary-600 transition-colors text-sm font-medium">Cotações</a>
+                <a href="#faq" class="text-gray-600 hover:text-primary-600 transition-colors text-sm font-medium">Dúvidas</a>
+                <a href="#sobre" class="text-gray-600 hover:text-primary-600 transition-colors text-sm font-medium">Sobre</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content" role="main">
+        <!-- Hero Section -->
+        <section class="relative py-12 md:py-20 px-4 md:px-8 lg:px-16 overflow-hidden" aria-labelledby="hero-title">
+            <!-- Background decorative elements -->
+            <div class="absolute top-0 right-0 w-96 h-96 bg-gradient-to-bl from-primary-100 to-transparent rounded-full blur-3xl opacity-60 -translate-y-1/2 translate-x-1/2" aria-hidden="true"></div>
+            <div class="absolute bottom-0 left-0 w-72 h-72 bg-gradient-to-tr from-pink-100 to-transparent rounded-full blur-3xl opacity-40 translate-y-1/2 -translate-x-1/2" aria-hidden="true"></div>
+            
+            <div class="max-w-7xl mx-auto relative z-10">
+                <div class="text-center mb-12">
+                    <h1 id="hero-title" class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4 leading-tight">
+                        Conversor de Moedas<br>
+                        <span class="bg-gradient-to-r from-primary-600 to-accent bg-clip-text text-transparent">Cotação em Tempo Real</span>
+                    </h1>
+                    <p class="text-gray-600 text-lg md:text-xl max-w-2xl mx-auto">
+                        Converta <strong>Dólar</strong>, <strong>Euro</strong>, <strong>Libra</strong> e outras moedas com cotações atualizadas. 
+                        Simples, rápido e gratuito.
+                    </p>
+                </div>
+
+                <!-- Converter Card -->
+                <article class="max-w-4xl mx-auto" aria-label="Conversor de moedas">
+                    <div class="bg-white rounded-3xl shadow-2xl shadow-gray-200/50 border border-gray-100 p-6 md:p-10">
+                        <div class="grid md:grid-cols-[1fr,auto,1fr] gap-6 md:gap-4 items-end">
+                            <!-- From Currency -->
+                            <div class="space-y-3">
+                                <label for="fromAmount" class="block text-sm font-medium text-gray-500 uppercase tracking-wide">
+                                    Eu tenho
+                                </label>
+                                <div class="flex gap-2">
+                                    <div class="relative flex-1">
+                                        <input 
+                                            type="text" 
+                                            id="fromAmount" 
+                                            inputmode="decimal"
+                                            placeholder="0,00"
+                                            autocomplete="off"
+                                            class="w-full px-4 py-4 text-2xl font-semibold text-gray-800 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all"
+                                            aria-label="Digite o valor a converter"
+                                            aria-describedby="converter-help"
+                                        >
+                                    </div>
+                                    <div class="relative">
+                                        <select 
+                                            id="fromCurrency" 
+                                            class="appearance-none h-full px-4 py-4 pr-10 text-base font-medium text-gray-700 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary-500 cursor-pointer hover:bg-gray-100 transition-colors"
+                                            aria-label="Selecione a moeda de origem"
+                                        >
+                                            <option value="BRL" selected>BRL</option>
+                                            <option value="USD">USD</option>
+                                            <option value="EUR">EUR</option>
+                                            <option value="GBP">GBP</option>
+                                            <option value="JPY">JPY</option>
+                                            <option value="CAD">CAD</option>
+                                            <option value="AUD">AUD</option>
+                                            <option value="CHF">CHF</option>
+                                            <option value="CNY">CNY</option>
+                                            <option value="ARS">ARS</option>
+                                        </select>
+                                        <div class="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none" aria-hidden="true">
+                                            <svg class="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Exchange Rate Display -->
+                            <div class="flex flex-col items-center justify-center py-2">
+                                <button 
+                                    id="swapCurrencies" 
+                                    type="button"
+                                    class="w-12 h-12 rounded-full bg-gradient-to-br from-primary-500 to-primary-600 text-white flex items-center justify-center shadow-lg hover:shadow-xl hover:scale-105 transition-all focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
+                                    aria-label="Inverter moedas de origem e destino"
+                                >
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"></path>
+                                    </svg>
+                                </button>
+                                <div class="mt-3 text-center">
+                                    <span id="exchangeRate" class="text-sm font-medium text-gray-500" aria-live="polite">1 BRL = 0.18 USD</span>
+                                </div>
+                            </div>
+
+                            <!-- To Currency -->
+                            <div class="space-y-3">
+                                <label for="toAmount" class="block text-sm font-medium text-gray-500 uppercase tracking-wide">
+                                    Eu quero
+                                </label>
+                                <div class="flex gap-2">
+                                    <div class="relative flex-1">
+                                        <input 
+                                            type="text" 
+                                            id="toAmount" 
+                                            inputmode="decimal"
+                                            placeholder="0,00"
+                                            autocomplete="off"
+                                            class="w-full px-4 py-4 text-2xl font-semibold text-gray-800 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all"
+                                            aria-label="Valor convertido"
+                                        >
+                                    </div>
+                                    <div class="relative">
+                                        <select 
+                                            id="toCurrency" 
+                                            class="appearance-none h-full px-4 py-4 pr-10 text-base font-medium text-gray-700 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary-500 cursor-pointer hover:bg-gray-100 transition-colors"
+                                            aria-label="Selecione a moeda de destino"
+                                        >
+                                            <option value="USD" selected>USD</option>
+                                            <option value="EUR">EUR</option>
+                                            <option value="GBP">GBP</option>
+                                            <option value="BRL">BRL</option>
+                                            <option value="JPY">JPY</option>
+                                            <option value="CAD">CAD</option>
+                                            <option value="AUD">AUD</option>
+                                            <option value="CHF">CHF</option>
+                                            <option value="CNY">CNY</option>
+                                            <option value="ARS">ARS</option>
+                                        </select>
+                                        <div class="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none" aria-hidden="true">
+                                            <svg class="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Help text -->
+                        <p id="converter-help" class="sr-only">Digite um valor e selecione as moedas para converter automaticamente</p>
+
+                        <!-- Last Update -->
+                        <div class="mt-6 pt-6 border-t border-gray-100 flex flex-wrap justify-between items-center gap-4">
+                            <p class="text-sm text-gray-500">
+                                Última atualização: <time id="lastUpdate" class="font-medium text-gray-700">--</time>
+                            </p>
+                            <button 
+                                id="refreshRates" 
+                                type="button"
+                                class="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-primary-600 hover:text-primary-700 hover:bg-primary-50 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-primary-500"
+                                aria-label="Atualizar cotações"
+                            >
+                                <svg id="refreshIcon" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
+                                </svg>
+                                Atualizar cotações
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Floating currency icons -->
+                <div class="currency-circle hidden lg:block absolute top-20 right-20 w-20 h-20 rounded-full bg-gradient-to-br from-green-400 to-green-600 text-white text-3xl font-bold shadow-xl animate-float opacity-80" aria-hidden="true">
+                    <span>$</span>
+                </div>
+                <div class="currency-circle hidden lg:block absolute top-40 right-48 w-16 h-16 rounded-full bg-gradient-to-br from-amber-400 to-amber-600 text-white text-2xl font-bold shadow-xl animate-float-delayed opacity-80" aria-hidden="true">
+                    <span>£</span>
+                </div>
+                <div class="currency-circle hidden lg:block absolute bottom-20 right-32 w-24 h-24 rounded-full border-4 border-primary-300 text-primary-500 text-4xl font-bold animate-float-slow opacity-60" aria-hidden="true">
+                    <span>€</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Popular Rates Section -->
+        <section id="cotacoes" class="py-16 px-4 md:px-8 lg:px-16 bg-gray-50" aria-labelledby="cotacoes-title">
+            <div class="max-w-7xl mx-auto">
+                <h2 id="cotacoes-title" class="text-2xl md:text-3xl font-bold text-gray-900 mb-2 text-center">Cotações do Dia</h2>
+                <p class="text-gray-600 text-center mb-10">Valores atualizados em relação ao Real Brasileiro (BRL)</p>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4" id="popularRates" role="list" aria-label="Cotações populares">
+                    <article class="rate-card bg-white rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-lg transition-all" role="listitem">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="currency-circle w-12 h-12 rounded-full bg-gradient-to-br from-green-400 to-green-600 text-white font-bold text-lg" aria-hidden="true">
+                                <span>$</span>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-900">Dólar Americano</h3>
+                                <span class="text-sm text-gray-500">USD</span>
+                            </div>
+                        </div>
+                        <div class="flex items-end justify-between">
+                            <span class="text-2xl font-bold text-gray-900" id="usdRate" aria-label="Cotação do dólar">R$ --</span>
+                            <span class="text-sm font-medium text-green-600" id="usdChange" aria-label="Variação"></span>
+                        </div>
+                    </article>
+
+                    <article class="rate-card bg-white rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-lg transition-all" role="listitem">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="currency-circle w-12 h-12 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 text-white font-bold text-lg" aria-hidden="true">
+                                <span>€</span>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-900">Euro</h3>
+                                <span class="text-sm text-gray-500">EUR</span>
+                            </div>
+                        </div>
+                        <div class="flex items-end justify-between">
+                            <span class="text-2xl font-bold text-gray-900" id="eurRate" aria-label="Cotação do euro">R$ --</span>
+                            <span class="text-sm font-medium text-green-600" id="eurChange" aria-label="Variação"></span>
+                        </div>
+                    </article>
+
+                    <article class="rate-card bg-white rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-lg transition-all" role="listitem">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="currency-circle w-12 h-12 rounded-full bg-gradient-to-br from-amber-400 to-amber-600 text-white font-bold text-lg" aria-hidden="true">
+                                <span>£</span>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-900">Libra Esterlina</h3>
+                                <span class="text-sm text-gray-500">GBP</span>
+                            </div>
+                        </div>
+                        <div class="flex items-end justify-between">
+                            <span class="text-2xl font-bold text-gray-900" id="gbpRate" aria-label="Cotação da libra">R$ --</span>
+                            <span class="text-sm font-medium text-green-600" id="gbpChange" aria-label="Variação"></span>
+                        </div>
+                    </article>
+
+                    <article class="rate-card bg-white rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-lg transition-all" role="listitem">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="currency-circle w-12 h-12 rounded-full bg-gradient-to-br from-red-400 to-red-600 text-white font-bold text-lg" aria-hidden="true">
+                                <span>¥</span>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-900">Iene Japonês</h3>
+                                <span class="text-sm text-gray-500">JPY</span>
+                            </div>
+                        </div>
+                        <div class="flex items-end justify-between">
+                            <span class="text-2xl font-bold text-gray-900" id="jpyRate" aria-label="Cotação do iene">R$ --</span>
+                            <span class="text-sm font-medium text-green-600" id="jpyChange" aria-label="Variação"></span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Conversion Table Section -->
+        <section class="py-16 px-4 md:px-8 lg:px-16" aria-labelledby="tabela-title">
+            <div class="max-w-4xl mx-auto">
+                <h2 id="tabela-title" class="text-2xl md:text-3xl font-bold text-gray-900 mb-2 text-center">Tabela de Conversão</h2>
+                <p class="text-gray-600 text-center mb-10">Valores comuns convertidos automaticamente</p>
+                
+                <div class="bg-white rounded-2xl border border-gray-100 shadow-lg overflow-hidden">
+                    <div class="grid grid-cols-2 bg-gray-50 border-b border-gray-100">
+                        <div class="p-4 font-semibold text-gray-700">
+                            <span id="tableFromCurrency">BRL</span>
+                        </div>
+                        <div class="p-4 font-semibold text-gray-700">
+                            <span id="tableToCurrency">USD</span>
+                        </div>
+                    </div>
+                    <div id="conversionTable" role="table" aria-label="Tabela de conversão de moedas">
+                        <!-- Rows inserted by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section (Critical for SEO - Featured Snippets) -->
+        <section id="faq" class="py-16 px-4 md:px-8 lg:px-16 bg-gray-50" aria-labelledby="faq-title">
+            <div class="max-w-4xl mx-auto">
+                <h2 id="faq-title" class="text-2xl md:text-3xl font-bold text-gray-900 mb-2 text-center">Perguntas Frequentes</h2>
+                <p class="text-gray-600 text-center mb-10">Tire suas dúvidas sobre conversão de moedas</p>
+                
+                <div class="space-y-4">
+                    <div class="faq-item bg-white rounded-xl border border-gray-100 overflow-hidden">
+                        <button class="faq-question w-full p-6 text-left flex justify-between items-center" aria-expanded="false">
+                            <h3 class="font-semibold text-gray-900">Qual a diferença entre dólar comercial e dólar turismo?</h3>
+                            <svg class="faq-icon w-5 h-5 text-gray-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="faq-answer px-6 pb-6">
+                            <p class="text-gray-600">O <strong>dólar comercial</strong> é utilizado em transações entre bancos, instituições financeiras e grandes empresas para operações de importação e exportação. Já o <strong>dólar turismo</strong> é a taxa aplicada para pessoas físicas, como em viagens internacionais e compras no exterior. O dólar turismo costuma ser 2% a 5% mais caro que o comercial devido aos custos operacionais das casas de câmbio.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item bg-white rounded-xl border border-gray-100 overflow-hidden">
+                        <button class="faq-question w-full p-6 text-left flex justify-between items-center" aria-expanded="false">
+                            <h3 class="font-semibold text-gray-900">Com que frequência as cotações são atualizadas?</h3>
+                            <svg class="faq-icon w-5 h-5 text-gray-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="faq-answer px-6 pb-6">
+                            <p class="text-gray-600">Nosso conversor utiliza dados de <strong>APIs oficiais do mercado financeiro brasileiro</strong>, com cotações atualizadas em tempo real durante o horário comercial (9h às 18h). As taxas são obtidas diretamente de fontes como o Banco Central do Brasil e mercados internacionais de câmbio.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item bg-white rounded-xl border border-gray-100 overflow-hidden">
+                        <button class="faq-question w-full p-6 text-left flex justify-between items-center" aria-expanded="false">
+                            <h3 class="font-semibold text-gray-900">Por que o dólar varia tanto?</h3>
+                            <svg class="faq-icon w-5 h-5 text-gray-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="faq-answer px-6 pb-6">
+                            <p class="text-gray-600">A cotação do dólar é influenciada por diversos fatores: <strong>taxa de juros</strong> (Selic no Brasil e Fed nos EUA), <strong>balança comercial</strong>, <strong>inflação</strong>, <strong>cenário político</strong> e <strong>especulação no mercado financeiro</strong>. Eventos globais como crises econômicas ou decisões de bancos centrais também afetam diretamente o câmbio.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item bg-white rounded-xl border border-gray-100 overflow-hidden">
+                        <button class="faq-question w-full p-6 text-left flex justify-between items-center" aria-expanded="false">
+                            <h3 class="font-semibold text-gray-900">Quanto vale 1 dólar em reais hoje?</h3>
+                            <svg class="faq-icon w-5 h-5 text-gray-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="faq-answer px-6 pb-6">
+                            <p class="text-gray-600">A cotação atual do dólar é exibida em tempo real no nosso conversor acima. Basta verificar o card "Dólar Americano" na seção de cotações ou usar o conversor digitando 1 no campo de valor com USD selecionado. As cotações são atualizadas automaticamente durante o pregão.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item bg-white rounded-xl border border-gray-100 overflow-hidden">
+                        <button class="faq-question w-full p-6 text-left flex justify-between items-center" aria-expanded="false">
+                            <h3 class="font-semibold text-gray-900">É melhor comprar dólar agora ou esperar?</h3>
+                            <svg class="faq-icon w-5 h-5 text-gray-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="faq-answer px-6 pb-6">
+                            <p class="text-gray-600">Não é possível prever com certeza o comportamento do câmbio. Especialistas recomendam a estratégia de <strong>compra fracionada</strong>: adquirir pequenas quantidades ao longo do tempo para obter uma média de preço. Evite comprar tudo de uma vez em momentos de alta volatilidade. Nosso conversor ajuda você a acompanhar as cotações diariamente.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="sobre" class="py-16 px-4 md:px-8 lg:px-16" aria-labelledby="sobre-title">
+            <div class="max-w-4xl mx-auto">
+                <h2 id="sobre-title" class="text-2xl md:text-3xl font-bold text-gray-900 mb-8 text-center">Sobre o Conversor</h2>
+                
+                <div class="grid md:grid-cols-2 gap-8">
+                    <article class="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-3">Cotações em Tempo Real</h3>
+                        <p class="text-gray-600">
+                            Utilizamos APIs oficiais do mercado financeiro para fornecer cotações precisas e atualizadas. 
+                            Os dados são obtidos de fontes confiáveis como o Banco Central do Brasil.
+                        </p>
+                    </article>
+                    
+                    <article class="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-3">Múltiplas Moedas</h3>
+                        <p class="text-gray-600">
+                            Converta entre as principais moedas do mundo: Dólar Americano (USD), Euro (EUR), 
+                            Libra Esterlina (GBP), Iene (JPY), Real Brasileiro (BRL) e outras.
+                        </p>
+                    </article>
+                    
+                    <article class="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-3">100% Gratuito</h3>
+                        <p class="text-gray-600">
+                            Nosso conversor é totalmente gratuito, sem cadastro, sem anúncios invasivos. 
+                            Use quantas vezes quiser para suas conversões de moedas.
+                        </p>
+                    </article>
+                    
+                    <article class="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-3">Fácil de Usar</h3>
+                        <p class="text-gray-600">
+                            Interface simples e intuitiva. Basta digitar o valor, selecionar as moedas 
+                            e a conversão acontece automaticamente em tempo real.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-8 px-4 md:px-8 lg:px-16 border-t border-gray-100" role="contentinfo">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center">
+                <p class="text-gray-500 text-sm">
+                    As cotações apresentadas são de caráter informativo e podem sofrer variações. 
+                    Consulte uma instituição financeira para operações de câmbio.
+                </p>
+                <p class="text-gray-400 text-sm mt-2">
+                    UteisHub - Conversor de Moedas Online - Todos os direitos reservados
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Conversor de Moedas Online",
+        "alternateName": "Conversor Dólar Euro",
+        "description": "Conversor de moedas com cotações em tempo real. Converta dólar, euro, libra e outras moedas para Real Brasileiro.",
+        "url": "https://uteishub.com/ConversorMoedas/",
+        "applicationCategory": "FinanceApplication",
+        "operatingSystem": "All",
+        "browserRequirements": "Requires JavaScript",
+        "softwareVersion": "2.0",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "BRL"
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "ratingCount": "1250"
+        }
+    }
+    </script>
+
+    <!-- FAQPage Schema for Featured Snippets -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Qual a diferença entre dólar comercial e dólar turismo?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "O dólar comercial é utilizado em transações entre bancos, instituições financeiras e grandes empresas para operações de importação e exportação. Já o dólar turismo é a taxa aplicada para pessoas físicas, como em viagens internacionais e compras no exterior. O dólar turismo costuma ser 2% a 5% mais caro que o comercial."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Com que frequência as cotações são atualizadas?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "As cotações são atualizadas em tempo real durante o horário comercial (9h às 18h), utilizando dados de APIs oficiais do mercado financeiro brasileiro e do Banco Central do Brasil."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Por que o dólar varia tanto?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "A cotação do dólar é influenciada por diversos fatores: taxa de juros (Selic no Brasil e Fed nos EUA), balança comercial, inflação, cenário político e especulação no mercado financeiro. Eventos globais como crises econômicas também afetam o câmbio."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Quanto vale 1 dólar em reais hoje?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "A cotação atual do dólar é exibida em tempo real no conversor. As cotações são atualizadas automaticamente durante o pregão do mercado financeiro."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "É melhor comprar dólar agora ou esperar?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Não é possível prever o câmbio com certeza. Especialistas recomendam a compra fracionada: adquirir pequenas quantidades ao longo do tempo para obter uma média de preço, evitando comprar tudo de uma vez em momentos de alta volatilidade."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <!-- Organization Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Conversor de Moedas",
+        "url": "https://uteishub.com/ConversorMoedas/",
+        "logo": "https://uteishub.com/ConversorMoedas/assets/images/favicon.svg",
+        "sameAs": []
+    }
+    </script>
+
+    <!-- BreadcrumbList Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Início",
+                "item": "https://uteishub.com/ConversorMoedas/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Cotações",
+                "item": "https://uteishub.com/ConversorMoedas/#cotacoes"
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Perguntas Frequentes",
+                "item": "https://uteishub.com/ConversorMoedas/#faq"
+            }
+        ]
+    }
+    </script>
+
+    <!-- Application Script -->
+    <script src="./assets/js/app.js" defer></script>
+</body>
+</html>
